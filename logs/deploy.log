@@ -1,0 +1,125 @@
+zkCloudWorker CLI tool v0.4.0 (c) DFST 2024 www.zkcloudworker.com
+
+Options: { verbose: true }
+isFileExist { filename: 'config', name: './.zkcloudworker/config.json' }
+package.json: {
+  name: 'socialcap-minanft-worker',
+  author: 'MAZ',
+  packageManager: 'yarn@4.2.1'
+}
+options used: {
+  developer: 'MAZ',
+  repo: 'socialcap-minanft-worker',
+  version: '0.1.1',
+  JWT: undefined,
+  packageManager: 'yarn'
+}
+Deploying the repo to the cloud... {
+  developer: 'MAZ',
+  repo: 'socialcap-minanft-worker',
+  version: '0.1.1',
+  packageManager: 'yarn'
+}
+Creating zip file...
+Zip file created: ./.zkcloudworker/socialcap-minanft-worker.zip
+Zip file size: 29,024 bytes
+Uploading zip file to zkCloudWorker's cloud storage...
+upload {
+  developer: 'MAZ',
+  repo: 'socialcap-minanft-worker',
+  mimeType: 'application/zip'
+}
+presignedUrl api call result: {
+  url: 'https://s3.eu-west-1.amazonaws.com/zkcloudworker-storage/MAZ/socialcap-minanft-worker.0.1.1.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAQ3EGRHIPADSNUC5E%2F20240606%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20240606T150033Z&X-Amz-Expires=600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCWV1LXdlc3QtMSJHMEUCIQCDwOHt2ch4ZRQxuDxoRcn0p7jFhgLglsm4a420rJ9MlgIgJcMsS%2FqLEotn0e2ZBoo%2Fpa9OFaLaOnZfXfY6nvK7VXEqqgMI2P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwwNTgyNjQyMDU4NTQiDELkE2TxGdqZGic8fyr%2BArijqmmUtEuo8EDG1DtksEjMwJHSayoPzCDVgqyDc%2Fdf0eLutzjnDcJZW%2BnmZb0ea44wXJJxksn%2FF%2F6TrGFfeP6lkew%2BBdqkjmhndeInX1wQ10nkGAfcqyczdRPcBUMwcFEFKL%2FszCNJPOuA5WD6q93LDEF2PbFxxVzsZEtwypg4TUtZwW41IkOwEGVbBu5vt4X0B9GLbtQTiz9M1jNTOnoec3DBTfcic08WNFEyV6Q15oZiUjDJd82T0Pyv%2BgO4okkPKip4bMXigi7iU8bEn%2FptavcajB3fSYB2mqRij37DvW0QJtwUIDjRkxUoXcqOkiDNEKtow7LINSn5f2wuXJ0MpfQdVAcOrZgGlciHqm0OaP4GD49IP20fm%2BhIrVUEdvuEhCH5oqrxeZRY%2FwdBxoCTk3RBH4jSMU36uE3AFb5Fx%2F%2Fewhld4%2BRO4ILVuPa34XsvCPIxz%2BZNzvweu0q%2FVXk7%2BgyUqlMKZffDOefYil3V7fpqqxgxm6IBn4PXrkUwzY2HswY6nQHtJSotFxsLIoHDzMf%2F8VTPRLP2jMQirlF%2Ft1cw2JZh%2FsQoy85goOpDJM45mmlwgaZT3aea7ia7DKJcVOXrEOgX%2Fv9Vn0hwCwvMVtUGQHti%2BDc1tjrfn%2FLgdkmLO9v3ErHSpMcco%2BAgu5sesukFSwYVAFH4EnQwDqsrQa8MnwdVYlldZG55JTQBnu%2Fam05VziMzaywUKzn4vUHtLHnG&X-Amz-Signature=79dc43789deeb9962cc48e3dca2ad40e050e748a0ff11f5ae93c012052403230&X-Amz-SignedHeaders=host&x-id=PutObject'
+}
+Success: upload: 200 OK
+deploy api call result: {
+  success: true,
+  jobId: 'zkCWBRiivwQBKiALryo2gC1tiyyGGL3KIxExVbIlrTyiPoEU'
+}
+Installing repo, this may take a few minutes...
+2024-06-06T15:00:36.846Z        INFO    worker {
+  command: 'deploy',
+  id: '6459034946',
+  jobId: 'zkCWBRiivwQBKiALryo2gC1tiyyGGL3KIxExVbIlrTyiPoEU',
+  developer: 'MAZ',
+  repo: 'socialcap-minanft-worker',
+  args: '{\n' +
+    '  "packageManager": "yarn",\n' +
+    '  "version": "0.1.1",\n' +
+    '  "size": 29024,\n' +
+    '  "protect": false\n' +
+    '}'
+}
+
+2024-06-06T15:00:37.246Z        INFO    RSS memory start: 95 MB
+
+2024-06-06T15:00:37.405Z        INFO    moved socialcap-minanft-worker.0.1.1.zip to /mnt/efs/worker/MAZ: 93.604ms
+
+2024-06-06T15:00:37.421Z        INFO    4 files in /mnt/efs/worker/MAZ [
+  'encryption-example',
+  'socialcap-deposits',
+  'socialcap-minanft-worker',
+  'socialcap-minanft-worker.0.1.1.zip'
+]
+
+2024-06-06T15:00:37.840Z        INFO    unzipped: 418.885ms
+
+2024-06-06T15:00:37.847Z        INFO    Installing package manager yarn...
+
+2024-06-06T15:00:38.720Z        INFO    11 files in /mnt/efs/worker/MAZ/socialcap-minanft-worker/0_1_1 [
+  '.env',          '.env-example',
+  '.gitignore',    '.yarnrc.yml',
+  'LICENSE',       'README.md',
+  'index.ts',      'package.json',
+  'src',           'tmp',
+  'tsconfig.json'
+]
+
+2024-06-06T15:00:38.721Z        INFO    Installing dependencies with yarn...
+
+2024-06-06T15:01:04.360Z        INFO    14 files in /mnt/efs/worker/MAZ/socialcap-minanft-worker/0_1_1 [
+  '.env',          '.env-example',
+  '.gitignore',    '.yarn',
+  '.yarnrc.yml',   'LICENSE',
+  'README.md',     'index.ts',
+  'node_modules',  'package.json',
+  'src',           'tmp',
+  'tsconfig.json', 'yarn.lock'
+]
+
+2024-06-06T15:01:04.361Z        INFO    Compiling...
+
+2024-06-06T15:01:08.240Z        INFO    compiled: 3.879s
+
+2024-06-06T15:01:08.250Z        INFO    15 files in /mnt/efs/worker/MAZ/socialcap-minanft-worker/0_1_1 [
+  '.env',         '.env-example',
+  '.gitignore',   '.yarn',
+  '.yarnrc.yml',  'LICENSE',
+  'README.md',    'dist',
+  'index.ts',     'node_modules',
+  'package.json', 'src',
+  'tmp',          'tsconfig.json',
+  'yarn.lock'
+]
+
+2024-06-06T15:01:08.251Z        INFO    installed: 30.404s
+
+2024-06-06T15:01:08.256Z        INFO    4 files in /mnt/efs/worker/MAZ/socialcap-minanft-worker/0_1_1/dist [ 'index.d.ts', 'index.js', 'src', 'tsconfig.tsbuildinfo' ]
+
+2024-06-06T15:01:08.484Z        INFO    1 files in /mnt/efs/worker/MAZ/socialcap-minanft-worker
+
+2024-06-06T15:01:08.484Z        INFO    deployed versions: [ '0_1_1' ]
+
+2024-06-06T15:01:08.485Z        INFO    1 files in /mnt/efs/worker/MAZ/socialcap-minanft-worker [ '0_1_1' ]
+
+2024-06-06T15:01:08.486Z        INFO    cleared old deployment: 7.4ms
+
+2024-06-06T15:01:08.486Z        INFO    RSS memory deployed: 80 MB, changed by -15 MB
+
+2024-06-06T15:01:08.486Z        INFO    deployed: 31.240s
+
+REPORT RequestId: Duration: 32667.59 ms Billed Duration: 32668 ms       Memory Size: 10240 MB   Max Memory Used: 1795 MB        Init Duration: 755.74 ms
+
+SUCCESS: Deployment completed
+deployed: 45.822s

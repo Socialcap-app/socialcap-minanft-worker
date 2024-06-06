@@ -1,0 +1,73 @@
+Socialcap MinaNFT Worker (c) MAZ/LM 2024 www.socialcap.app
+Arg0: arg0 Arg1: arg1 Arg2: arg2
+API response: {
+  success: true,
+  jobId: 'zkCWzlJFGxkPXWMuKYidyqoEMmhIUd3mfrbGy1fvcIBnMtSH',
+  result: undefined,
+  error: undefined
+}
+Waiting for job ...
+2024-06-06T15:02:05.930Z        INFO    worker {
+  command: 'execute',
+  id: '6459034946',
+  jobId: 'zkCWzlJFGxkPXWMuKYidyqoEMmhIUd3mfrbGy1fvcIBnMtSH',
+  developer: 'MAZ',
+  repo: 'socialcap-minanft-worker',
+  args: '{}'
+}
+
+2024-06-06T15:02:06.320Z        INFO    zkCloudWorker Execute start: {
+  command: 'execute',
+  developer: 'MAZ',
+  repo: 'socialcap-minanft-worker',
+  id: '6459034946',
+  jobId: 'zkCWzlJFGxkPXWMuKYidyqoEMmhIUd3mfrbGy1fvcIBnMtSH',
+  job: {
+    metadata: 'Mina NFT for Claim 012345678',
+    logStreams: [],
+    task: 'mint-minanft',
+    args: '{}',
+    timeCreated: 1717686124471,
+    jobId: 'zkCWzlJFGxkPXWMuKYidyqoEMmhIUd3mfrbGy1fvcIBnMtSH',
+    repo: 'socialcap-minanft-worker',
+    filename: 'MAZ/execute.1717686124396.json',
+    developer: 'MAZ',
+    chain: 'devnet',
+    txNumber: 1,
+    jobStatus: 'created',
+    id: '6459034946'
+  }
+}
+
+2024-06-06T15:02:06.370Z        INFO    execute: number of transactions: 1
+
+2024-06-06T15:02:06.370Z        INFO    RSS memory start: 95 MB
+
+2024-06-06T15:02:06.397Z        INFO    Running worker {
+  developer: 'MAZ',
+  repo: 'socialcap-minanft-worker',
+  version: '0.1.1'
+}
+
+2024-06-06T15:02:09.393Z        INFO    zkcloudworker cloud chain: devnet
+
+2024-06-06T15:02:09.409Z        INFO    Task: mint-minanft
+
+2024-06-06T15:02:09.409Z        INFO    Args: {}
+
+2024-06-06T15:02:09.409Z        INFO    Payload: {"memo":"Claim 012345678","payer":"arg0","fee":"arg1","amount":"arg2"}
+
+2024-06-06T15:02:09.409Z        INFO    Receiving payload amount: arg2 from: arg0, fee:arg1, memo: Claim 012345678
+
+2024-06-06T15:02:09.410Z        INFO    Unsigned transaction created and proved
+
+2024-06-06T15:02:09.410Z        INFO    RSS memory finished: 235 MB, changed by 140 MB
+
+2024-06-06T15:02:09.410Z        INFO    zkCloudWorker Execute Sync: 3.040s
+
+2024-06-06T15:02:09.628Z        INFO    zkCloudWorker Execute: 3.308s
+
+REPORT RequestId: Duration: 3723.36 ms  Billed Duration: 3724 ms        Memory Size: 10240 MB   Max Memory Used: 300 MB Init Duration: 691.18 ms
+
+Writing txn to:  ./tmp/serialized-txn.json
+Serialized Txn: "{\"hash\":\"DEMO-TXN-HASH\"}"
