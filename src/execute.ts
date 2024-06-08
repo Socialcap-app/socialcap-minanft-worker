@@ -24,7 +24,7 @@ async function main(args: string[]) {
   const response = await api.execute({
     mode: "async",
     repo: "socialcap-minanft-worker",
-    developer: "MAZ", // keep it simple, no strange chars here ! 
+    developer: "LEOMANZA", // keep it simple, no strange chars here ! 
     task: "mint-minanft",
     metadata: `Mina NFT for Claim ${claim.uid}`,
     args: JSON.stringify({}),

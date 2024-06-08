@@ -50,7 +50,8 @@ export class MinaNFTWorker extends zkCloudWorker {
     if (!payerExists) throw Error("Fee payer account does not exist");
     console.log(`Payer account exists`);
 
-    AccountUpdate.fundNewAccount(payerPublicKey);
+  
+    console.log(`Payer account exists`);
     
     const zkAppAddress = PublicKey.fromBase58(MINANFT_NAME_SERVICE_V2);
 		const zkApp = new NameContractV2(zkAppAddress);
@@ -62,6 +63,8 @@ export class MinaNFTWorker extends zkCloudWorker {
         memo: (memo || "").substring(0,32) 
       }, 
       async () => {
+        console.log("calling mint with ", mintParams)
+        AccountUpdate.fundNewAccount(payerPublicKey);
         await zkApp.mint(mintParams)
       }
     );
