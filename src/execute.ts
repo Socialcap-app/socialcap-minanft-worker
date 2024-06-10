@@ -3,12 +3,12 @@ import { zkCloudWorkerClient } from "zkcloudworker";
 import fs from "fs";
 
 async function main(args: string[]) {
-  console.log(`Socialcap MinaNFT Worker (c) MAZ/LM 2024 www.socialcap.app`);
+  console.log(`Socialcap MinaNFT Worker (c) MAZ/LEOMANZA 2024 www.socialcap.app`);
   if (!args[0] || !args[1] || !args[2]) {
-    console.log(`Use: \n  yarn start arg0 arg1 arg2`);
+    console.log(`Use: \n  yarn start arg0 arg1 arg2 arg3`);
     process.exit(1);
   }
-  console.log(`Arg0: ${args[0]} Arg1: ${args[1]} Arg2: ${args[2]}`);
+  console.log(`Arg0: ${args[0]} Arg1: ${args[1]} Arg2: ${args[2]} Arg3: ${args[3]}`);
 
   const JWT = process.env.JWT as string;
 
@@ -24,18 +24,20 @@ async function main(args: string[]) {
   const response = await api.execute({
     mode: "async",
     repo: "socialcap-minanft-worker",
-    developer: "MAZ", // keep it simple, no strange chars here ! 
+    developer: "LEOMANZA", // keep it simple, no strange chars here ! 
     task: "mint-minanft",
     metadata: `Mina NFT for Claim ${claim.uid}`,
     args: JSON.stringify({}),
     transactions: [JSON.stringify({
-      memo: `Claim ${claim.uid}`.substring(0, 32), // memo field in Txn
+      memo: `Mint NFT for Claim ${claim.uid}`.substring(0, 32), // memo field in Txn
       payer: args[0],
-      fee: args[1],
-      amount: args[2]
-    })],
-  });
+      mintParams: args[1],
+      fee: args[2],
+      claimUid: args[3],
+     
 
+    })],
+  }); 
   console.log("API response:", response);
   const jobId = response?.jobId;
   if (jobId === undefined) {
